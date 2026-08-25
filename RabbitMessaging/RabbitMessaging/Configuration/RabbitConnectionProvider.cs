@@ -31,7 +31,16 @@ public class RabbitConnectionProvider(RabbitSettings rabbitSettings) : IRabbitCo
             throw;
         }
 
-        return await connection.CreateChannelAsync();
+        // Publisher confirms: with tracking enabled, BasicPublishAsync itself doesn't
+        // complete until the broker acks the message — it throws PublishReturnException
+        // (unroutable) or PublishException (nacked) instead of silently succeeding.
+        // Harmless to enable on every channel, including consume-only ones, since it's
+        // inert unless something actually calls BasicPublishAsync on it.
+        var channelOptions = new CreateChannelOptions(
+            publisherConfirmationsEnabled: true,
+            publisherConfirmationTrackingEnabled: true);
+
+        return await connection.CreateChannelAsync(channelOptions);
     }
 
     private Task<IConnection> OpenConnectionWithRetryAsync(string connectionName)

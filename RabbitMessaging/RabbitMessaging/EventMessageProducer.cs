@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using RabbitMessaging.Configuration.Models;
 using RabbitMessaging.Core;
 using RabbitMQ.Client;
+using RabbitMQ.Client.Exceptions;
 
 namespace RabbitMessaging;
 
@@ -28,12 +29,35 @@ public class EventMessageProducer<T>(IRabbitConnectionProvider connectionProvide
             Persistent = exchange.Durable
         };
 
-        await channel.BasicPublishAsync(exchange: exchange.Name,
-            routingKey: routingKey,
-            mandatory: false,
-            basicProperties: properties,
-            body: new ReadOnlyMemory<byte>(body));
+        // mandatory: true means an unroutable message (routing key matches no queue) is
+        // rejected instead of silently dropped. Combined with publisher confirms enabled
+        // on the channel (see RabbitConnectionProvider), BasicPublishAsync doesn't complete
+        // until the broker actually acks the message — a failure surfaces as an exception
+        // here instead of the caller wrongly believing the publish succeeded.
+        try
+        {
+            await channel.BasicPublishAsync(exchange: exchange.Name,
+                routingKey: routingKey,
+                mandatory: true,
+                basicProperties: properties,
+                body: new ReadOnlyMemory<byte>(body));
+        }
+        catch (PublishReturnException ex)
+        {
+            // More specific than PublishException (which it derives from) — the broker
+            // accepted the message but couldn't route it anywhere, e.g. a typo'd routing
+            // key or a binding that doesn't exist yet.
+            throw new InvalidOperationException(
+                $"Message '{messageName}' was unroutable — no queue is bound to exchange '{exchange.Name}' " +
+                $"with routing key '{routingKey}' (broker replied {ex.ReplyCode}: {ex.ReplyText}).", ex);
+        }
+        catch (PublishException ex)
+        {
+            throw new InvalidOperationException(
+                $"Broker did not confirm message '{messageName}' published to exchange '{exchange.Name}' " +
+                $"(publish sequence {ex.PublishSequenceNumber}).", ex);
+        }
 
-        return $"Published {messageName} to exchange '{exchange.Name}' with routing key '{routingKey}'";
+        return $"Published and confirmed {messageName} to exchange '{exchange.Name}' with routing key '{routingKey}'";
     }
 }
