@@ -1,0 +1,15 @@
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/bin/Debug/net10.0/Orchestration.Infrastructure.Rabbit.deps.json
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/bin/Debug/net10.0/Orchestration.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/bin/Debug/net10.0/Orchestration.Infrastructure.Rabbit.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestration.Infrastructure.Rabbit.csproj.AssemblyReference.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestration.Infrastructure.Rabbit.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestration.Infrastructure.Rabbit.AssemblyInfoInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestration.Infrastructure.Rabbit.AssemblyInfo.cs
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestration.Infrastructure.Rabbit.csproj.CoreCompileInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestration.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/refint/Orchestration.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestration.Infrastructure.Rabbit.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/ref/Orchestration.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/bin/Debug/net10.0/Orchestration.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/bin/Debug/net10.0/Orchestration.Domain.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Infrastructure.Rabbit/obj/Debug/net10.0/Orchestr.FF92975D.Up2Date

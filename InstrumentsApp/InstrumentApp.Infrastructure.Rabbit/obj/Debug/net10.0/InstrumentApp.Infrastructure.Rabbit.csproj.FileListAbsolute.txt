@@ -1,0 +1,12 @@
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/bin/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.deps.json
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/bin/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/bin/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.AssemblyInfoInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.AssemblyInfo.cs
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.csproj.CoreCompileInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/refint/InstrumentApp.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/ref/InstrumentApp.Infrastructure.Rabbit.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentApp.Infrastructure.Rabbit/obj/Debug/net10.0/InstrumentApp.Infrastructure.Rabbit.csproj.AssemblyReference.cache

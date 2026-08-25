@@ -1,0 +1,11 @@
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/bin/Release/net10.0/Orchestration.Domain.deps.json
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/bin/Release/net10.0/Orchestration.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/bin/Release/net10.0/Orchestration.Domain.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/Orchestration.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/Orchestration.Domain.AssemblyInfoInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/Orchestration.Domain.AssemblyInfo.cs
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/Orchestration.Domain.csproj.CoreCompileInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/Orchestration.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/refint/Orchestration.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/Orchestration.Domain.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.Domain/obj/Release/net10.0/ref/Orchestration.Domain.dll

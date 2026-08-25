@@ -1,0 +1,7 @@
+﻿services:
+  orchestration.webapi:
+    image: orchestration.webapi
+    build:
+      context: .
+      dockerfile: Orchestration.WebAPI/Dockerfile
+

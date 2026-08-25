@@ -1,0 +1,71 @@
+@page "/instruments"
+@rendermode InteractiveServer
+@implements IDisposable
+@using InstrumentApp.DomainServices.Core
+@using InstrumentApp.Infrastructure.Rabbit.Messages
+@using InstrumentsApp.Domain
+@using InstrumentsApp.Services.Notifications
+@inject IInstrumentService InstrumentService
+@inject IInstrumentStatusNotifier InstrumentStatusNotifier
+
+<PageTitle>Instruments</PageTitle>
+
+<h1>Instruments</h1>
+
+@if (instruments == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var instrument in instruments.Values.OrderBy(i => i.Name))
+        {
+            <tr>
+                <td>@instrument.Name</td>
+                <td>@instrument.Description</td>
+                <td>@instrument.Status</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Dictionary<Guid, Instrument>? instruments;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var loaded = await InstrumentService.GetInstruments();
+        instruments = loaded.ToDictionary(i => i.InstrumentId);
+
+        InstrumentStatusNotifier.StatusChanged += OnStatusChangedAsync;
+    }
+
+    private async Task OnStatusChangedAsync(InstrumentStatusChangeMessage message)
+    {
+        if (instruments is null || !instruments.TryGetValue(message.InstrumentId, out var instrument))
+        {
+            return;
+        }
+
+        instruments[message.InstrumentId] = instrument with { Status = message.Status };
+
+        await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        InstrumentStatusNotifier.StatusChanged -= OnStatusChangedAsync;
+    }
+}

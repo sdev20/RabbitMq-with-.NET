@@ -1,0 +1,15 @@
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/bin/Debug/net10.0/Orchestration.WebApiClient.deps.json
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/bin/Debug/net10.0/Orchestration.WebApiClient.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/bin/Debug/net10.0/Orchestration.WebApiClient.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/bin/Debug/net10.0/Orchestration.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/bin/Debug/net10.0/Orchestration.Domain.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestration.WebApiClient.csproj.AssemblyReference.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestration.WebApiClient.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestration.WebApiClient.AssemblyInfoInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestration.WebApiClient.AssemblyInfo.cs
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestration.WebApiClient.csproj.CoreCompileInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestr.24E7366B.Up2Date
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestration.WebApiClient.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/refint/Orchestration.WebApiClient.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/Orchestration.WebApiClient.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/Orchestration/Orchestration.WebApiClient/obj/Debug/net10.0/ref/Orchestration.WebApiClient.dll

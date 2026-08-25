@@ -1,0 +1,35 @@
+@Orchestration.WebAPI_HostAddress = http://localhost:5199
+
+GET {{Orchestration.WebAPI_HostAddress}}/instruments/
+Accept: application/json
+
+###
+
+GET {{Orchestration.WebAPI_HostAddress}}/instruments/00000000-0000-0000-0000-000000000000
+Accept: application/json
+
+###
+
+POST {{Orchestration.WebAPI_HostAddress}}/instruments/
+Content-Type: application/json
+
+{
+  "instrumentId": "00000000-0000-0000-0000-000000000000",
+  "name": "Brent Crude Futures",
+  "description": "ICE Brent crude oil futures contract",
+  "status": 0
+}
+
+###
+
+PUT {{Orchestration.WebAPI_HostAddress}}/instruments/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+{
+  "instrumentId": "00000000-0000-0000-0000-000000000000",
+  "name": "Brent Crude Futures",
+  "description": "ICE Brent crude oil futures contract",
+  "status": 1
+}
+
+###

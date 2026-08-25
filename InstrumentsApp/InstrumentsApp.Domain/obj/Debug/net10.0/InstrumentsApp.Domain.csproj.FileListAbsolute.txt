@@ -1,0 +1,11 @@
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/bin/Debug/net10.0/InstrumentsApp.Domain.deps.json
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/bin/Debug/net10.0/InstrumentsApp.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/bin/Debug/net10.0/InstrumentsApp.Domain.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/InstrumentsApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/InstrumentsApp.Domain.AssemblyInfoInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/InstrumentsApp.Domain.AssemblyInfo.cs
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/InstrumentsApp.Domain.csproj.CoreCompileInputs.cache
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/InstrumentsApp.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/refint/InstrumentsApp.Domain.dll
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/InstrumentsApp.Domain.pdb
+/Users/sruthisriharsha/Documents/Git/sruthi projects/InstrumentsApp/InstrumentsApp.Domain/obj/Debug/net10.0/ref/InstrumentsApp.Domain.dll
