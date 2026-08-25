@@ -1,0 +1,4 @@
+# Build output (matches at any depth, so this covers every project's
+# bin/Debug, bin/Release, obj/Debug, etc. under both Orchestration/ and InstrumentsApp/)
+bin/
+obj/
