@@ -1,4 +1,4 @@
-namespace Orchestration.Infrastructure.Rabbit.Core;
+namespace RabbitMessaging.Core;
 
 public interface IRabbitTopologyInitializer
 {

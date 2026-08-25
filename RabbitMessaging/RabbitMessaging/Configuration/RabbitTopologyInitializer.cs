@@ -1,7 +1,7 @@
-using InstrumentApp.Infrastructure.Rabbit.Core;
-using InstrumentApp.Infrastructure.Rabbit.Models;
+using RabbitMessaging.Configuration.Models;
+using RabbitMessaging.Core;
 
-namespace InstrumentApp.Infrastructure.Rabbit;
+namespace RabbitMessaging.Configuration;
 
 public class RabbitTopologyInitializer(IRabbitConnectionProvider connectionProvider, RabbitSettings rabbitSettings) : IRabbitTopologyInitializer
 {

@@ -1,14 +1,14 @@
 using System.Text;
-using InstrumentApp.Infrastructure.Rabbit.Core;
-using InstrumentApp.Infrastructure.Rabbit.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using RabbitMessaging.Configuration.Models;
+using RabbitMessaging.Core;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace InstrumentApp.Infrastructure.Rabbit;
+namespace RabbitMessaging;
 
 public class RabbitConsumerHostedService<T>(
     IRabbitConnectionProvider connectionProvider,

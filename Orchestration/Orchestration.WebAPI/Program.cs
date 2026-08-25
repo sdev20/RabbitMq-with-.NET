@@ -1,9 +1,10 @@
 using Orchestration.DomainServices;
 using Orchestration.DomainServices.BusinessLogic;
 using Orchestration.DomainServices.BusinessLogic.Core;
-using Orchestration.Infrastructure.Rabbit;
-using Orchestration.Infrastructure.Rabbit.Core;
-using Orchestration.Infrastructure.Rabbit.Models;
+using RabbitMessaging;
+using RabbitMessaging.Configuration;
+using RabbitMessaging.Configuration.Models;
+using RabbitMessaging.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,14 +19,13 @@ builder.Services.AddScoped<IInstrumentService, InstrumentService>();
 builder.Services.AddScoped(typeof(IEventMessageProducer<>), typeof(EventMessageProducer<>));
 builder.Services.AddSingleton<IRabbitConnectionProvider, RabbitConnectionProvider>();
 builder.Services.AddSingleton<IRabbitTopologyInitializer, RabbitTopologyInitializer>();
+builder.Services.AddHostedService<RabbitTopologyBackgroundInitializer>();
 
 var rabbitSettings = builder.Configuration.GetSection("Rabbit").Get<RabbitSettings>()
     ?? throw new InvalidOperationException("Missing 'Rabbit' configuration section.");
 builder.Services.AddSingleton(rabbitSettings);
 
 var app = builder.Build();
-
-await app.Services.GetRequiredService<IRabbitTopologyInitializer>().DeclareTopologyAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,4 +1,4 @@
-namespace InstrumentApp.Infrastructure.Rabbit.Core;
+namespace RabbitMessaging.Core;
 
 public interface IMessageProcessor<in T> where T : class
 {

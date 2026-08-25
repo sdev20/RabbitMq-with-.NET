@@ -1,8 +1,8 @@
 using Orchestration.Domain.Models;
 using Orchestration.DomainServices.BusinessLogic;
 using Orchestration.DomainServices.BusinessLogic.Core;
-using Orchestration.Infrastructure.Rabbit.Core;
 using Orchestration.Infrastructure.Rabbit.Messages;
+using RabbitMessaging.Core;
 
 namespace Orchestration.DomainServices;
 

@@ -1,6 +1,6 @@
-using InstrumentApp.Infrastructure.Rabbit.Core;
 using InstrumentApp.Infrastructure.Rabbit.Messages;
 using InstrumentsApp.Services.Notifications;
+using RabbitMessaging.Core;
 
 namespace InstrumentsApp.Services.MessageProcessors;
 

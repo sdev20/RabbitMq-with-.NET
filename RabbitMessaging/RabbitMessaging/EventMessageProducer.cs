@@ -1,9 +1,10 @@
 using System.Text;
 using Newtonsoft.Json;
-using Orchestration.Infrastructure.Rabbit.Core;
-using Orchestration.Infrastructure.Rabbit.Models;
+using RabbitMessaging.Configuration.Models;
+using RabbitMessaging.Core;
 using RabbitMQ.Client;
-namespace Orchestration.Infrastructure.Rabbit;
+
+namespace RabbitMessaging;
 
 public class EventMessageProducer<T>(IRabbitConnectionProvider connectionProvider, RabbitSettings rabbitSettings) : IEventMessageProducer<T> where T : class
 {

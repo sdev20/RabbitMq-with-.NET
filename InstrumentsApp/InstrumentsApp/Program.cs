@@ -1,13 +1,14 @@
 using InstrumentApp.DomainServices;
 using InstrumentApp.DomainServices.Core;
-using InstrumentApp.Infrastructure.Rabbit;
-using InstrumentApp.Infrastructure.Rabbit.Core;
 using InstrumentApp.Infrastructure.Rabbit.Messages;
-using InstrumentApp.Infrastructure.Rabbit.Models;
 using InstrumentsApp.Components;
 using InstrumentsApp.Services.MessageProcessors;
 using InstrumentsApp.Services.Notifications;
 using Orchestration.WebApiClient;
+using RabbitMessaging;
+using RabbitMessaging.Configuration;
+using RabbitMessaging.Configuration.Models;
+using RabbitMessaging.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
