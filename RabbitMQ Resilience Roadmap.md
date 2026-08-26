@@ -295,10 +295,14 @@ A fanout exchange ignores the routing key entirely, which is exactly what a DLX 
 
 A DLQ is a triage inbox, not an auto-retry mechanism. The standard posture: something alerts on DLQ depth, a human (or a semi-automated tool) looks at *why* it failed, and only then decides whether to replay, fix-and-replay, or discard. Blindly replaying everything in a DLQ back onto the original queue is a known anti-pattern — a message that failed at 2pm can be stale by 5pm if newer messages for the same entity succeeded in between; naive replay would silently overwrite current-correct state with old data.
 
-The more robust real answer is to make replay *safe by construction* rather than relying on discipline: if every message carries something ordering-comparable (a timestamp, a version, a sequence number), the consumer's processing logic becomes "only apply this if it's newer than what I already have." Under that rule, replaying a stale DLQ message is naturally a no-op instead of data corruption. `InstrumentStatusChangeMessage` already carries `ChangedAtUtc` — that's exactly the field a last-write-wins check would use. 
+Under that rule, replaying a stale DLQ message is naturally a no-op instead of data corruption. `InstrumentStatusChangeMessage` already carries `ChangedAtUtc` — that's exactly the field a last-write-wins check would use. 
 
 DLQs also typically carry their own TTL in production (old, untriaged messages auto-expire) rather than growing forever.
-The natural place is the DLQ itself, not the source queue — add a MessageTtlMilliseconds (or similar) property to RabbitQueueSettings, and have RabbitTopologyInitializer pass x-message-ttl alongside x-dead-letter-exchange in the queue-declare arguments when a queue has one configured.
+In the DLQ itself, not the source queue — add a MessageTtlMilliseconds (or similar) property to RabbitQueueSettings, and have RabbitTopologyInitializer pass x-message-ttl alongside x-dead-letter-exchange in the queue-declare arguments when a queue has one configured.
+
+One option, On how to handle DLQ:
+
+Can add a logging-only consumer - a second RabbitConsumerHostedService type Listener on the DLQ whose job is to `logger.LogWarning("Dead-lettered: {...}")` per message it sees, so it shows up on logs 
 
 ---
 
