@@ -22,11 +22,15 @@ public class RabbitTopologyInitializer(IRabbitConnectionProvider connectionProvi
         {
             await using var channel = await connectionProvider.CreateChannelAsync(queue.Connection);
 
+            var arguments = queue.DeadLetterExchange is not null
+                ? new Dictionary<string, object?> { ["x-dead-letter-exchange"] = queue.DeadLetterExchange }
+                : null;
+
             await channel.QueueDeclareAsync(queue: queue.Name,
                 durable: queue.Durable,
                 exclusive: false,
                 autoDelete: false,
-                arguments: null);
+                arguments: arguments);
         }
 
         foreach (var binding in rabbitSettings.Schema.Bindings)
