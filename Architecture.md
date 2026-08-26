@@ -8,6 +8,8 @@ This document explains how RabbitMQ messaging is implemented using .Net:
 - **Orchestration** — an ASP.NET Core Web API that owns instrument data and **publishes** an event whenever an instrument's status changes.
 - **InstrumentsApp** — a Blazor Server app that **consumes** that event and updates its UI live.
 
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/4be11753-de1c-4926-baac-5f060654c6a2" />
+
 
 ## RabbitMQ concepts used here
 
