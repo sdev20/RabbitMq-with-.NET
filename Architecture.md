@@ -52,7 +52,7 @@ flowchart LR
 
 Orchestration never talks to InstrumentsApp directly, and InstrumentsApp never talks to Orchestration to receive an update — both only talk to RabbitMQ. That's the whole point of using a broker: the two applications can be deployed, restarted, or scaled independently.
 
-## Exchange type: topic
+## Exchange type
 
 The exchange is declared as a **topic** exchange:
 
