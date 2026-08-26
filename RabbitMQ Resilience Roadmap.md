@@ -185,6 +185,8 @@ But implemented manual retry method here:
 
 **Manual per-message retry counter.** A plain `nack(requeue: true)` redelivers the *exact same* message — no header changes, no counter. To count attempts, the consumer has to track its own header and, since a redelivery can't carry a modified header, **republish** a new copy with the counter incremented rather than just requeueing.
 
+<img width="835" height="663" alt="image" src="https://github.com/user-attachments/assets/740841dd-5755-4d77-88d5-21fadeedc061" />
+
 
 **Config additions** — a queue can now declare where to send messages it gives up on, and a consumer can set its own retry limit:
 
