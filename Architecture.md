@@ -1,5 +1,8 @@
 # RabbitMQ Implementation with .NET
 
+What is RabbitMQ? follow this video: https://youtu.be/7rkeORD4jSw?si=9P1PQNRJ8XGUGvNP
+<img width="500" height="301" alt="image" src="https://github.com/user-attachments/assets/cebb8f5c-c4eb-4071-a587-92fefc5324a9" />
+
 This document explains how RabbitMQ messaging is implemented using .Net:
 
 - **Orchestration** — an ASP.NET Core Web API that owns instrument data and **publishes** an event whenever an instrument's status changes.
