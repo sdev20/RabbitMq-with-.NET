@@ -512,6 +512,8 @@ A few details worth calling out for anyone new to this:
 
 - **`BasicQosAsync(0, 1, false, ...)`** — tells RabbitMQ "only ever send me one unacknowledged message at a time." Without this, the broker would push every ready message at once.
 - **`autoAck: false`** — the consumer, not the broker, decides when a message counts as "done." A message stays on the queue (invisible to other consumers, but not deleted) until it's explicitly acknowledged.
+autoAck: true would mean the broker considers a message handled the instant it's put on the wire to the consumer — before your code has even run. If the consumer crashes mid-ProcessAsync, that message is already gone from the broker's perspective. No redelivery, no second chance, silently lost. 
+We chose autoAck: false — manual acknowledgment.
 - **`BasicAckAsync`** — "I successfully processed this, you can delete it now."
 - **`BasicNackAsync(..., requeue: true)`** — "something went wrong, put it back on the queue" (used here inside the `catch` block, so a processing failure doesn't silently lose the message).
 - **`scopeFactory.CreateAsyncScope()`** — a new dependency-injection scope is created for every single message, so `IMessageProcessor<T>` can safely use scoped services (like a database context) without them leaking or being reused across unrelated messages.
