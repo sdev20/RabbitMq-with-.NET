@@ -2,20 +2,6 @@
 
 This document is about making the pipeline survive the failure modes a message broker actually runs into in production. It's the follow-up to [RabbitMQ Implementation with .NET](./RabbitMQ%20Implementation%20with%20.Net.md), worked through one phase at a time.
 
-
-## Status
-
-| # | Phase | Status |
-|---|-------|--------|
-| 1 | Verify message durability | Not started |
-| 2 | Connection retry with backoff | **Implemented** |
-| 3 | Publisher confirms | **Implemented** |
-| 4 | Dead-letter queue + consumer retry policy | **Implemented** |
-| 5 | Consumer idempotency | Not started |
-| 6 | Broker-down UI notification | Not started |
-| 7 | Clustering / quorum queues | Not started |
-
-
 ---
 
 ## 1. Messages lost during broker downtime
